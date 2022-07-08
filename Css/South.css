@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+:root{
+        --yellow:#F7CA3E;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+        
+/* Navbar */
+    
+section{
+    min-height: 100vh;
+    padding: 1rem 10%;
+    padding-top: 8.5rem;   
+}
+    
+.btn{
+    font-size: 1.7rem;
+    padding: .7rem 4rem;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    border: .2rem solid var(--yellow);
+}    
+    
+.btn:hover{
+    background: var(--yellow);
+}
+    
+body .navi{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #fff;
+    padding:1.5rem 10%;
+    box-shadow: 0 .3rem 2rem rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+.navi .logo{
+    width: 60px;
+    padding: 5px 15px;
+}
+    
+.navi .logo img{
+    height: 45px;
+}
+    
+.navi .navbar{
+    width: 400px;
+}
+
+.navi .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.navi .navbar ul li{
+    margin-left: 3rem;
+}
+
+.navi .navbar ul li a{
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #666;
+}
+    
+    /* Hamburger */
+    .container-1 {
+        display: none;
+        cursor: pointer;
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-51deg) translate(-9px, 6px);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(44deg) translate(-8px, -8px);
+    }
+      
+    /* Home styling */
+    #home{
+        height: 550px;
+        padding: 3px 200px;
+    } 
+    
+    
+    #home::before{
+        content: '';
+        position: absolute;
+        top: 10rem;
+        left: 16rem;
+        background: rgb(250, 248, 248);
+        transform: rotate(0deg);
+        border-radius: 15px;
+        height: 47rem;
+        width: 80rem;
+        z-index: -1;
+        box-shadow: 0 1rem 4rem rgba(0,0,0,0.3);
+        animation: animte 1.5s linear 1;
+    }
+    
+    #home::after{
+        content: '';
+        position: absolute;
+        top: 13rem; right: 11rem;
+        background: var(--yellow);
+        transform: rotate(0deg);
+        border-radius: 15px;
+        height: 40rem;
+        width: 46rem;
+        z-index: -1;
+        animation: animta 1.5s linear 1;
+    }
+    
+    @keyframes animte {
+        0%{
+            transform: rotate(0deg) translateX(-20rem);
+            border-radius: 0px; 
+        }
+    }
+    
+    @keyframes animta {
+        0%{
+            transform: rotate(0deg) translateX(20rem);
+            border-radius: 0px;
+        }
+    }
+    
+    .south{
+        border-radius: 15px;
+        position: relative;
+        top: 130px;
+        left: 10px;
+        height: 400px;
+        width: 400px;
+        background: url("/Pictures/south.jpg") no-repeat center center/cover;
+        animation: south 1.5s linear;
+    }  
+    
+    @keyframes south {
+        0%{
+            border-radius: 0px;
+        }
+    }
+    
+    #home .main{
+        position: absolute;
+        top: 300px;
+        right: 200px;
+    }
+    
+    
+    #home .main h1{
+        text-align: right;
+        font-size: 50px;
+    }
+    
+.search{
+    margin-top: 35px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+ 
+#search-box{
+    border-radius: 55px;
+    border: 2px solid rgb(213, 207, 207);
+    padding: 0px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),-6px,-6px,10px,-1px rgba(255,255,255,0.7);;
+}
+#icon{
+    width: 76px;
+    cursor: pointer;
+}
+
+input{
+    font-size: 20px;
+    width: 0px;
+    border: 0;
+    background: transparent;
+    outline: none;
+    transition: 2s;
+}
+.active input{
+    width: 500px;
+    padding: 12px 20px;
+}
+
+
+#food-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+.sec-item{
+    width: 89%;
+    margin: 20px;
+}
+.inside{
+    height: 312px;
+    width: 266px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+#box-1{
+    background: url("/Pictures/South Indian/Wheat\ dosa.jpg") no-repeat center center/cover;
+}
+
+#box-2{
+    background: url("/Pictures/South Indian/Vada.jpg") no-repeat center center/cover;
+}
+
+#box-3{
+    background: url("/Pictures/South Indian/Tamarind\ Rice.jpg") no-repeat center center/cover;
+}
+
+#box-4{
+    background: url("/Pictures/South Indian/Maggi\ Cheese\ dosa.png") no-repeat center center/cover;
+}
+
+#box-5{
+    background: url("/Pictures/South Indian/idli.jpg") no-repeat center center/cover;
+}
+
+#box-6{
+    background: url("/Pictures/South Indian/Capsicum\ rice.jpg") no-repeat center center/cover;
+}
+
+.h-primary{
+    font-family: "Chela one";
+    margin-top: 10px;
+    font-size: 2.8rem;
+    padding: 23px;
+    color: black;
+}
+.h-main{
+    font-family: "Revalia";
+    margin-top: 10px;
+    font-size: 4rem;
+    padding: 23px;
+    color: #fff;
+}
+.center{
+    text-align: center;
+}
+.sec-btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(207, 119, 19);
+    color: white;
+    margin: 15px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    display: block;
+    width: 175px;
+    margin: auto;
+    margin-top: 10px;
+}
+.h-sec{
+    font-family: "Chela One";
+    font-size: 2.5rem;
+    margin-top: 15px;
+}
